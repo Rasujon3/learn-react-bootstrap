@@ -1,15 +1,16 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 
-const News = () => {
+const News = (props) => {
+    const {title,description} = props.article;
     return (
         
             <Card>
             <Card.Header>Featured</Card.Header>
             <Card.Body>
-                <Card.Title>Special title treatment</Card.Title>
+                <Card.Title>{title}</Card.Title>
                 <Card.Text>
-                With supporting text below as a natural lead-in to additional content.
+                {description}
                 </Card.Text>
                 <Button variant="primary">Go somewhere</Button>
             </Card.Body>
